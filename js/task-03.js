@@ -5,13 +5,10 @@ buttonRef.addEventListener('click', () => {
   let message;
   const ADMIN_PASSWORD = 'jqueryismyjam';
 
-  switch (passwordInput) {
-    case ADMIN_PASSWORD:
-      message = 'Добро пожаловать!';
-      break;
-
-    default:
-      message = 'Доступ запрещен, неверный пароль!';
+  if (passwordInput === ADMIN_PASSWORD) {
+    message = 'Добро пожаловать!';
+  } else {
+    message = 'Доступ запрещен, неверный пароль!';
   }
 
   alert(message);

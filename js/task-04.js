@@ -5,7 +5,7 @@ let totalPrice;
 
 if (quantity === null) {
   console.log('Отменено пользователем!');
-} else if (quantity <= 0) {
+} else if (Number(quantity) <= 0) {
   console.log('Количество товаров в заказе указано не верно');
 } else {
   totalPrice = Number(quantity) * pricePerDroid;
